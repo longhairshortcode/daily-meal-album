@@ -4,6 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+//below code is like setting up a home (React root) for your app, asking React to be extra careful 
+//and warn about possible issues (StrictMode), then telling React to start building your app by 
+//rendering the main component (<App />) inside that home. This new way of rendering things 
+//(React 18's concurrent rendering) might make your app faster by doing things more efficiently
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

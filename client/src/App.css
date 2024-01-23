@@ -1,0 +1,117 @@
+.App {
+  text-align: center;
+}
+
+
+/* .App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+} */
+
+
+.calendar {
+  display: grid;
+  grid-template-rows: auto 1fr; /* Two rows: weekdays and days */
+  gap: 8px;
+  max-width: 100%;
+  margin: auto;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  background-color: #eee;
+  padding: 8px;
+  text-align: center;
+}
+
+.weekday {
+  text-align: center;
+  font-size: 14px; /* Adjust the font size to match the day squares */
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+
+.day-square {
+  border: 1px solid #ccc;
+  padding: 80px; /* Triple the padding for larger squares */
+  text-align: right;
+  background-color: #fff;
+  position: relative;
+}
+
+.day-square:hover .file-label {
+  display: block; /* Show the label on hover */
+}
+
+.day-square span {
+  position: absolute;
+  top: 6px; /* Adjust the top position to move the number to the top */
+  right: 9px; /* Adjust the right position to move the number to the right */
+  font-size: 24px; /* Make the number larger */
+  font-weight: bold; /* Make the number bold */
+}
+
+.empty-day {
+  height: 225px; /* Adjust the height for larger empty days */
+  background-color: #f0f0f0;
+}
+
+input[type="file"] {
+  position: absolute;
+  top: 50%; /* Adjust the top position to center the file input vertically */
+  left: 70%; /* Adjust the left position to center the file input horizontally */
+  transform: translate(-50%, -50%); /* Center the file input using transform */
+  opacity: 1; /* Make the file input invisible */
+  /* Add any additional styling you need for the file input */
+}
+
+.file-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 123, 255, 0.7); /* Adjust the background color and opacity */
+  color: #fff;
+  padding: 5px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  display: none; /* Initially hide the label */
+}
+
+.file-label input {
+  display: none;
+}
+
+
+.image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+
